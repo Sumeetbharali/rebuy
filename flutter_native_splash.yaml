@@ -1,0 +1,9 @@
+flutter_native_splash:
+  background_image: assets/images/splash_screen/splash_screen_background.png
+  image: assets/images/splash_screen/re_buy_logo.png 
+  android: true
+  ios: true
+  android_gravity: center
+  ios_content_mode: center
+
+  
