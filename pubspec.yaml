@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   flutter_screenutil: ^5.9.3
   flutter_native_splash: ^2.4.4
+  flutter_svg: ^2.0.17
 
 dev_dependencies:
   flutter_test:
@@ -18,6 +19,28 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
+  
+  uses-material-design: true
+
   assets:
     - assets/images/splash_screen/
-  uses-material-design: true
+    - assets/fonts/dosis/
+    - assets/svgs/
+
+  fonts:
+    - family: Dosis
+      fonts:
+        - asset: assets/fonts/dosis/dosis_extra_light.ttf
+          weight: 200
+        - asset: assets/fonts/dosis/dosis_light.ttf
+          weight: 300
+        - asset: assets/fonts/dosis/dosis_regular.ttf
+          weight: 400
+        - asset: assets/fonts/dosis/dosis_medium.ttf
+          weight: 500
+        - asset: assets/fonts/dosis/dosis_semi_bold.ttf
+          weight: 600
+        - asset: assets/fonts/dosis/dosis_bold.ttf
+          weight: 700
+        - asset: assets/fonts/dosis/dosis_extra_bold.ttf
+          weight: 800
