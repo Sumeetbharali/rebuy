@@ -11,4 +11,5 @@ class AppColor {
   static Color darkGray = const Color(0xFF3c3c3c);
   static Color vibrantRed = const Color(0xFFff5a5f);
   static Color deepTeal = const Color(0xFF087e8b);
+  static Color graphiteGray = const Color(0xFF898989);
 }

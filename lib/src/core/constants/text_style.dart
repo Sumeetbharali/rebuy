@@ -26,6 +26,18 @@ class AppTextStyles {
     color: AppColor.darkGray,
     height: 1.sp,
   );
+  static TextStyle robotoFont32DarkGray100ExtraBold1 = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont26DarkGray100ExtraBold1 = TextStyle(
+    fontSize: 26.sp,
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
   static TextStyle dosisFont50DarkGray100ExtraBold1 = TextStyle(
     fontSize: 50.sp,
     fontFamily: 'Dosis',
@@ -40,10 +52,22 @@ class AppTextStyles {
     color: AppColor.white.withOpacity(0.9),
     height: 1.sp,
   );
+  static TextStyle robotoFont24VibrantRed100Regular1 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.vibrantRed,
+    height: 1.sp,
+  );
   static TextStyle robotoFont14DarkGray50Regular1 = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColor.darkGray.withOpacity(0.5),
+    height: 1.sp,
+  );
+  static TextStyle robotoFont14DustyRose100Regular1 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.dustyRose,
     height: 1.sp,
   );
   static TextStyle robotoFont16DarkGray50Medium1 = TextStyle(
@@ -52,10 +76,22 @@ class AppTextStyles {
     color: AppColor.darkGray.withOpacity(0.5),
     height: 1.sp,
   );
+  static TextStyle robotoFont17DarkGray100Medium1 = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
   static TextStyle robotoFont16DarkGray100Medium1 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont15GraphiteGray100SemiBold1 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColor.graphiteGray,
     height: 1.sp,
   );
   static TextStyle robotoFont18DarkGray50Regular1 = TextStyle(
