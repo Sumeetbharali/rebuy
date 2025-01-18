@@ -3,24 +3,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rebuy/src/core/constants/constants.dart';
 
-// todo check why on tap is not working
 class AppBottomNavigationBar extends StatefulWidget {
-  const AppBottomNavigationBar({super.key});
+  AppBottomNavigationBar(
+      {super.key, required this.selectedIndex, required this.onIndexChanged});
+  final int selectedIndex;
+  void Function(int index) onIndexChanged;
 
   @override
   State<AppBottomNavigationBar> createState() => _AppBottomNavigationBarState();
 }
 
 class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
-  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        SizedBox.shrink(),
         Positioned(
-          top: -74.h,
+          bottom: 20.h,
           right: 15.w,
           child: Container(
             height: 54.h,
@@ -36,22 +36,22 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
                 children: [
                   bottomNavigationBarButton(
                       svg: 'assets/svgs/home.svg',
-                      isSelected: selectedIndex == 0 ? true : false,
+                      isSelected: widget.selectedIndex == 0 ? true : false,
                       index: 0),
                   bottomNavigationBarButton(
-                      svg: 'assets/svgs/heart.svg',
-                      isSelected: selectedIndex == 1 ? true : false,
+                      svg: 'assets/svgs/compass.svg',
+                      isSelected: widget.selectedIndex == 1 ? true : false,
                       index: 1),
                   SizedBox(
                     width: 64.w,
                   ),
                   bottomNavigationBarButton(
-                      svg: 'assets/svgs/compass.svg',
-                      isSelected: selectedIndex == 3 ? true : false,
+                      svg: 'assets/svgs/heart.svg',
+                      isSelected: widget.selectedIndex == 3 ? true : false,
                       index: 3),
                   bottomNavigationBarButton(
                       svg: 'assets/svgs/message_square.svg',
-                      isSelected: selectedIndex == 4 ? true : false,
+                      isSelected: widget.selectedIndex == 4 ? true : false,
                       index: 4),
                 ],
               ),
@@ -69,10 +69,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
           required int index}) =>
       GestureDetector(
         onTap: () {
-          setState(() {
-            print(index);
-            selectedIndex = index;
-          });
+          widget.onIndexChanged(index > 1 ? index - 1 : index);
         },
         child: Container(
           width: 66.w,
@@ -93,7 +90,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
 
   Widget centerButton() => Positioned.fromRect(
         rect: Rect.fromCenter(
-            center: Offset(414.w / 2, -47.h), width: 64.w, height: 64.h),
+            center: Offset(414.w / 2, 817.h), width: 64.w, height: 64.h),
         child: InkWell(
           borderRadius: BorderRadius.circular(50.r),
           onTap: () {
