@@ -7,9 +7,11 @@ import 'package:rebuy/src/features/authentication/presentation/widgets/common_wi
 import 'package:rebuy/src/features/authentication/presentation/widgets/common_widgets/social_buttons.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/login_widgets/email_and_password_fields.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/login_widgets/sign_up_text.dart';
+import 'package:rebuy/src/features/authentication/presentation/widgets/sign_up_widgets/login_text.dart';
+import 'package:rebuy/src/features/authentication/presentation/widgets/sign_up_widgets/name_email_and_password.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,24 +24,24 @@ class LoginPage extends StatelessWidget {
               const ReBuyAppBar(),
               verticalSpace(height: 68),
               const HeaderAndSubHeaderText(
-                header: 'Log in',
-                subHeader: 'Login with one of the following options',
+                header: 'Sign up',
+                subHeader: 'Sign up with one of the following options',
               ),
               verticalSpace(height: 20),
               const SocialButtons(),
               verticalSpace(height: 40),
               const OrWithLines(),
               verticalSpace(height: 40),
-              const EmailAndPasswordFields(),
+              const NameEmailAndPassword(),
               verticalSpace(height: 20),
               AuthenticationButton(
-                text: 'Log in',
+                text: 'Create account',
                 onTap: () {
-                  debugPrint("login");
+                  debugPrint("Create account");
                 },
               ),
               verticalSpace(height: 35),
-              const SignUpText(),
+              const LoginText(),
               verticalSpace(height: 20),
             ],
           ),

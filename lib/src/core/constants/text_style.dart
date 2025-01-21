@@ -18,12 +18,92 @@ class FontWeightHelper {
 class AppTextStyles {
   // to calculate the height of the text use this ratio font height in design divided by font size
 
-  // we add font family and size and color with percentage and type then font height
-  // static TextStyle poppinsFont68White100Regular1_14 = TextStyle(
-  //   fontSize: 68.sp,
-  //   fontFamily: 'Poppins',
-  //   fontWeight: FontWeightHelper.regular,
-  //   color: AppColor.white,
-  //   height: 1.14.sp,
-  // );
+  //**  we write [font family],[size],[color],[opacity percentage],[font weight] and [font height]*/
+  static TextStyle dosisFont32DarkGray100ExtraBold1 = TextStyle(
+    fontSize: 32.sp,
+    fontFamily: 'Dosis',
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont32DarkGray100ExtraBold1 = TextStyle(
+    fontSize: 32.sp,
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont26DarkGray100ExtraBold1 = TextStyle(
+    fontSize: 26.sp,
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle dosisFont50DarkGray100ExtraBold1 = TextStyle(
+    fontSize: 50.sp,
+    fontFamily: 'Dosis',
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle dosisFont24White90ExtraBold1 = TextStyle(
+    fontSize: 24.sp,
+    fontFamily: 'Dosis',
+    fontWeight: FontWeightHelper.extraBold,
+    color: AppColor.white.withOpacity(0.9),
+    height: 1.sp,
+  );
+  static TextStyle robotoFont24VibrantRed100Regular1 = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.vibrantRed,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont14DarkGray50Regular1 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.darkGray.withOpacity(0.5),
+    height: 1.sp,
+  );
+  static TextStyle robotoFont14DustyRose100Regular1 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.dustyRose,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont16DarkGray50Medium1 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.darkGray.withOpacity(0.5),
+    height: 1.sp,
+  );
+  static TextStyle robotoFont17DarkGray100Medium1 = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont16DarkGray100Medium1 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.darkGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont15GraphiteGray100SemiBold1 = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColor.graphiteGray,
+    height: 1.sp,
+  );
+  static TextStyle robotoFont18DarkGray50Regular1 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.darkGray.withOpacity(0.5),
+    height: 1.sp,
+  );
+  static TextStyle robotoFont18VibrantRed100Medium1 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.vibrantRed,
+    height: 1.sp,
+  );
 }

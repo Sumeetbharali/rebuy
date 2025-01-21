@@ -1,3 +1,5 @@
+import 'package:rebuy/src/core/theme/theme.dart';
+
 import 'src/core/config/config.dart';
 import 'package:flutter/material.dart';
 import 'src/core/routes/routes.dart';
@@ -12,10 +14,11 @@ class ReBuyApp extends StatelessWidget {
       designSize: const Size(414, 896),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, ch) => const DismissKeyboard(
+      builder: (context, ch) => DismissKeyboard(
         child: MaterialApp(
+          theme: AppThemes.defaultTheme,
           debugShowCheckedModeBanner: false,
-          initialRoute: RoutesName.initial,
+          initialRoute: RoutesNames.initial,
           onGenerateRoute: AppRoute.generate,
         ),
       ),
