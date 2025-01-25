@@ -7,25 +7,37 @@ import 'package:rebuy/src/core/helpers/spacing.dart';
 class StoreAppBar extends StatelessWidget {
   const StoreAppBar(
       {super.key,
-      required this.leading,
-      required this.title,
-      this.leftPadding});
+      this.leading,
+      this.title,
+      this.titleText,
+      this.leftPadding,
+      this.rightPadding})
+      : assert(
+            (title == null && titleText != null) ||
+                (title != null && titleText == null),
+            'Either title or titleText must be provided, but not both');
   final double? leftPadding;
-  final Widget leading;
-  final Widget title;
+  final Widget? leading;
+  final Widget? title;
+  final String? titleText;
+  final double? rightPadding;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          EdgeInsets.only(left: leftPadding?.w ?? 35.w, right: 25.w, top: 30.h),
+      padding: EdgeInsets.only(
+          left: leftPadding?.w ?? 35.w,
+          right: rightPadding?.w ?? 25.w,
+          top: 30.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          leading,
+          leading ?? backButton(context: context),
           horizontalSpace(width: 18.w),
-          title,
+          title ??
+              Text(titleText ?? '',
+                  style: AppTextStyles.robotoFont26DarkGray100ExtraBold1),
           const Spacer(),
           GestureDetector(
             onTap: () {},
@@ -36,6 +48,22 @@ class StoreAppBar extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget backButton({required BuildContext context}) {
+    return GestureDetector(
+      onTap: () {
+        debugPrint('back');
+      },
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: SvgPicture.asset(
+          "assets/svgs/back_icon.svg",
+          height: 46.h,
+          width: 46.w,
+        ),
       ),
     );
   }

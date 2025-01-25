@@ -19,7 +19,7 @@ class LoginText extends StatelessWidget {
                 text: ' Log in',
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    Navigator.pushReplacementNamed(context, RoutesNames.login);
+                    Navigator.pushReplacementNamed(context, RouteNames.login);
                   },
                 style: AppTextStyles.robotoFont18VibrantRed100Medium1)
           ],

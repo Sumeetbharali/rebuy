@@ -18,7 +18,7 @@ class ReBuyApp extends StatelessWidget {
         child: MaterialApp(
           theme: AppThemes.defaultTheme,
           debugShowCheckedModeBanner: false,
-          initialRoute: RoutesNames.initial,
+          initialRoute: RouteNames.initial,
           onGenerateRoute: AppRoute.generate,
         ),
       ),

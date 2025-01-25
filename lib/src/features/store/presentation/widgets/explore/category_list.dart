@@ -40,8 +40,15 @@ class CategoryList extends StatelessWidget {
             color: AppColor.darkGray,
           ),
           child: Center(
-              child: Text(categoryName,
-                  style: AppTextStyles.robotoFont17SoftGray100Medium1)),
+            child: Padding(
+              padding: EdgeInsets.all(2.w),
+              child: Text(
+                categoryName,
+                style: AppTextStyles.robotoFont17SoftGray100Medium1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ),
         ),
       );
 }

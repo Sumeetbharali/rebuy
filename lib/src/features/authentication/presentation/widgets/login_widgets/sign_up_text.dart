@@ -19,7 +19,7 @@ class SignUpText extends StatelessWidget {
                 text: ' Sign up',
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    Navigator.pushReplacementNamed(context, RoutesNames.signUp);
+                    Navigator.pushReplacementNamed(context, RouteNames.signUp);
                   },
                 style: AppTextStyles.robotoFont18VibrantRed100Medium1)
           ],

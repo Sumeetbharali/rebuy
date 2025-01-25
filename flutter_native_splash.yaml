@@ -5,5 +5,10 @@ flutter_native_splash:
   ios: true
   android_gravity: center
   ios_content_mode: center
+  android_12:
+    image: assets/images/splash_screen/re_buy_logo.png
+    background_image: assets/images/splash_screen/splash_screen_background.png
+    #icon_background_color: "#ffffff"
+    android_gravity: center
 
   

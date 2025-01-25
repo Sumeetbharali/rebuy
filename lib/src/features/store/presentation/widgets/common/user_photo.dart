@@ -3,7 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rebuy/src/core/constants/constants.dart';
 
 class UserPhoto extends StatelessWidget {
-  const UserPhoto({super.key});
+  const UserPhoto(
+      {super.key,
+      required this.width,
+      required this.height,
+      required this.showOuterCircle,
+      required this.showMenuButton});
+  final double width;
+  final double height;
+  final bool showOuterCircle;
+  final bool showMenuButton;
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +20,18 @@ class UserPhoto extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          width: 90.w,
-          height: 90.h,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: AppColor.darkGray, width: 2.w),
-          ),
+          width: showOuterCircle ? width.w + 10.w : null,
+          height: showOuterCircle ? height.h + 10.h : null,
+          decoration: showOuterCircle
+              ? BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: AppColor.darkGray, width: 2.w),
+                )
+              : null,
           child: Center(
             child: Container(
-              width: 80.w,
-              height: 80.h,
+              width: width.w,
+              height: height.h,
               decoration: const BoxDecoration(shape: BoxShape.circle),
               child: const CircleAvatar(
                 backgroundImage:
@@ -29,7 +40,7 @@ class UserPhoto extends StatelessWidget {
             ),
           ),
         ),
-        _menuButton(),
+        Visibility(visible: showMenuButton, child: _menuButton()),
       ],
     );
   }

@@ -5,8 +5,6 @@ import 'package:rebuy/src/features/authentication/presentation/widgets/common_wi
 import 'package:rebuy/src/features/authentication/presentation/widgets/common_widgets/header_and_sub_header_text.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/common_widgets/or_with_lines.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/common_widgets/social_buttons.dart';
-import 'package:rebuy/src/features/authentication/presentation/widgets/login_widgets/email_and_password_fields.dart';
-import 'package:rebuy/src/features/authentication/presentation/widgets/login_widgets/sign_up_text.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/sign_up_widgets/login_text.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/sign_up_widgets/name_email_and_password.dart';
 

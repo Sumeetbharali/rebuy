@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rebuy/src/core/helpers/spacing.dart';
+import 'package:rebuy/src/core/routes/names.dart';
 import 'package:rebuy/src/core/widgets/re_buy_app_bar.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/common_widgets/authentication_button.dart';
 import 'package:rebuy/src/features/authentication/presentation/widgets/common_widgets/header_and_sub_header_text.dart';
@@ -35,7 +36,7 @@ class LoginPage extends StatelessWidget {
               AuthenticationButton(
                 text: 'Log in',
                 onTap: () {
-                  debugPrint("login");
+                  Navigator.pushNamed(context, RouteNames.store);
                 },
               ),
               verticalSpace(height: 35),

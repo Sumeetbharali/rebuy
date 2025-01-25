@@ -20,6 +20,7 @@ class _StorePageState extends State<StorePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         toolbarHeight: 0.0,
         systemOverlayStyle: SystemUiOverlayStyle(
@@ -29,7 +30,6 @@ class _StorePageState extends State<StorePage> {
       ),
       body: SafeArea(
         child: Stack(
-          clipBehavior: Clip.none,
           children: [
             PageView(
               controller: _pageController,

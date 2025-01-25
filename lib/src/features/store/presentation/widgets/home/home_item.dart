@@ -45,25 +45,29 @@ class HomeItem extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Row(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Batman Toy',
-                  style: AppTextStyles.robotoFont17DarkGray100Medium1,
-                ),
-                verticalSpace(height: 8),
-                Text(
-                  '2018 | FunSkool',
-                  style: AppTextStyles.robotoFont14DustyRose100Regular1,
-                ),
-              ],
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Batman Toy',
+                    style: AppTextStyles.robotoFont17DarkGray100Medium1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  verticalSpace(height: 8),
+                  Text(
+                    '2018 | FunSkool',
+                    style: AppTextStyles.robotoFont14DustyRose100Regular1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
             ),
-            const Spacer(),
             Text(
               '₹ 899',
               style: AppTextStyles.robotoFont26DarkGray100ExtraBold1,
+              overflow: TextOverflow.ellipsis,
             ),
           ],
         ),
